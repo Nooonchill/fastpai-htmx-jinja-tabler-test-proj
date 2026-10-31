@@ -1,18 +1,67 @@
-# Локальные библиотеки
+# Сторонние компоненты
 
-Файлы включены в `app/static/vendor` и раздаются самим FastAPI.
-Установка через Node.js/npm не требуется.
+## Tabler Core 1.4.0
 
-| Библиотека | Версия | Лицензия | Источник файлов |
-|---|---|---|---|
-| Tabler Core | 1.4.0 | MIT | @tabler/core: dist/css/tabler.min.css, dist/css/tabler-vendors.min.css, dist/js/tabler.min.js |
-| Bootstrap (внутри Tabler JS) | 5.3.7 | MIT | включён в tabler.min.js |
-| HTMX | 2.0.11 | 0BSD | htmx.org: dist/htmx.min.js |
-| Chart.js | 4.5.1 | MIT | chart.js: dist/chart.umd.min.js |
-| Tom Select | 2.4.3 | Apache-2.0 | tom-select: dist/js/tom-select.complete.min.js, dist/css/tom-select.bootstrap5.min.css |
-| Litepicker | 2.0.12 | MIT | litepicker: dist/litepicker.js (стили включены в JS) |
+Полный официальный `dist` из `@tabler/core@1.4.0` сохранён без изменений в
+`app/static/vendor/tabler-1.4.0/` (1961 файл). Контрольная сумма исходного архива
+проверена по `dist.integrity` npm-реестра. `SOURCE.json` содержит SHA-256 всех файлов.
+`package.json` и `libs.json` сохранены рядом для справки; npm запускать не нужно.
 
-Вендорные дистрибутивы получены из соответствующих версий пакетов через jsDelivr
-при сборке этой поставки. Готовое приложение не обращается к jsDelivr или npm.
-Файлы лицензий находятся рядом с библиотеками; исходные заголовки сохранены.
-В шаблонах используется небольшой набор встроенных SVG-иконок.
+Tabler — MIT; текст и авторские уведомления версии 1.4.0 находятся в
+`app/static/vendor/LICENSE-tabler.txt`. Bootstrap 5.3.7 и Popper 2.11.8 включены
+в JavaScript Tabler; их MIT-лицензии сохранены в `licenses/`.
+
+## Библиотеки внутри официального dist
+
+Оригинальные лицензии сохранены в каталогах библиотек. Для Turbo лицензия
+дополнительно включена в `licenses/turbo-MIT-LICENSE`.
+
+| Библиотека | Версия в комплекте | Лицензия |
+|---|---|---|
+| @hotwired/turbo | 8.0.13 | MIT |
+| @melloware/coloris | 0.25.0 | MIT |
+| apexcharts | 3.54.1 | MIT |
+| autosize | 6.0.1 | MIT |
+| clipboard | 2.0.11 | MIT |
+| countup.js | 2.9.0 | MIT |
+| dropzone | 6.0.0-beta.2 | MIT |
+| fslightbox | 3.6.1 | MIT |
+| fullcalendar | 6.1.18 | MIT |
+| hugerte | 1.0.9 | MIT |
+| imask | 7.6.1 | MIT |
+| jsvectormap | 1.7.0 | MIT |
+| list.js | 2.3.1 | MIT |
+| litepicker | 2.0.12 | MIT |
+| nouislider | 15.8.1 | MIT |
+| plyr | 3.7.8 | MIT |
+| signature_pad | 5.0.10 | MIT |
+| star-rating.js | 4.3.1 | MIT |
+| tom-select | 2.4.3 | Apache-2.0 |
+| typed.js | 2.1.0 | MIT |
+
+## Дополнительно используемые библиотеки
+
+| Библиотека | Версия | Лицензия |
+|---|---|---|
+| HTMX | 2.0.11 | 0BSD |
+| Chart.js | 4.5.1 | MIT |
+
+Их файлы и лицензии находятся в `app/static/vendor/`.
+Tom Select и Litepicker подключаются из полного дистрибутива Tabler.
+
+## Python
+
+Тексты лицензий и уведомления установленных Python-пакетов, включая инструменты
+тестирования, сохранены в `licenses/python/`. Список версий, лицензий и файлов —
+`licenses/python-packages.json`. Зависимости закреплены в `uv.lock`.
+После обновления зависимостей этот список и копии лицензий нужно обновлять.
+
+## Коммерческое использование
+
+Tabler Core и включённые здесь версии его плагинов допускают коммерческое
+использование по MIT и Apache-2.0. Сохраняйте тексты лицензий, авторские уведомления
+и относящиеся к библиотекам NOTICE, если они есть. При распространении изменённых
+Apache-2.0-файлов отмечайте изменения. Эти лицензии не требуют раскрывать
+собственный код приложения. Python-зависимости сохраняют собственные лицензии;
+полный список находится в указанном выше JSON, включая MPL-2.0 у certifi
+из зависимостей тестового клиента. Новые версии библиотек могут иметь иные условия.
