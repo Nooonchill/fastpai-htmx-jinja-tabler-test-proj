@@ -7,3 +7,5 @@
 .local-card .bg-white-lt{color:var(--lab-muted)!important}.nav-pills .nav-link.active{color:white!important}.ts-wrapper{width:100%}.ts-control{min-height:39px;padding:8px 12px;font-size:13px;background:var(--lab-surface);color:inherit;border-color:var(--lab-border)}.ts-wrapper .ts-dropdown{background:var(--lab-surface);color:inherit;border-color:var(--lab-border)}.ts-wrapper .ts-dropdown .active{background:rgba(133,96,218,.12);color:inherit}.ts-wrapper.multi .ts-control>div{border:0;border-radius:4px;font-size:12px}.ts-wrapper .ts-control input{color:inherit}.ts-wrapper .ts-dropdown .option{padding:9px 12px}.placeholder{border-radius:4px}
 
 .carousel-demo{height:215px;padding:32px 24px;text-align:center;display:flex;align-items:center;justify-content:center;flex-direction:column}.carousel-demo>.mb-3 .icon{width:32px;height:32px}.carousel-demo h3{font-size:16px}.carousel-demo p{font-size:12px;opacity:.8}.datagrid{--tblr-datagrid-item-width:8rem}.datagrid-title{font-size:10px}.datagrid-content{font-size:12px}
+
+.official-icon{opacity:.65}[data-bs-theme=dark] .official-icon{filter:invert(1)}
