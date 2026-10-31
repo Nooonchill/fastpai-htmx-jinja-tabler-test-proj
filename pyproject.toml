@@ -1,0 +1,25 @@
+[project]
+name = "fastapi-htmx-jinja-tabler-test-proj"
+version = "0.1.0"
+description = "Local Tabler showcase with FastAPI, Jinja2 and HTMX"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+    "fastapi==0.162.0",
+    "jinja2==3.1.6",
+    "python-multipart==0.0.32",
+    "uvicorn==0.54.0",
+]
+
+[dependency-groups]
+dev = ["httpx==0.28.1", "pytest==9.2.0"]
+
+[tool.uv]
+python-downloads = "never"
+
+[[tool.uv.index]]
+url = "https://pypi.org/simple"
+default = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
